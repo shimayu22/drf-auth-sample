@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Todo(models.Model):
+class Todos(models.Model):
     memo = models.CharField(
       verbose_name="TODO",
       max_length=50,
@@ -18,5 +18,3 @@ class Todo(models.Model):
         auto_now=True,
     )
 
-    def __str__(self):
-      return self.memo + " : " + str(self.created_at) + " : " + str(self.updated_at)

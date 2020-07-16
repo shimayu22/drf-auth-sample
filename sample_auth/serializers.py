@@ -1,7 +1,7 @@
-from .models import Todo
+from .models import Todos
 from rest_framework import serializers
 
-class TodoSerializer(serializers.ModelSerializer):
+class TodosSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Todo
+    model = Todos
     fields = ('id', 'memo', 'created_at', 'updated_at')
