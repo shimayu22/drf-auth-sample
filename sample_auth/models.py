@@ -18,3 +18,7 @@ class Todos(models.Model):
         auto_now=True,
     )
 
+    class Meta:
+      verbose_name = "TODO"
+      verbose_name_plural = "TODO"
+
