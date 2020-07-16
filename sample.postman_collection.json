@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "86fa949a-f3a7-446f-8260-1cda3fb08ff0",
+		"name": "sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/token/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"create_user\",\n    \"password\": \"userpass1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				},
+				"description": "トークンを取得"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/todo/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk0ODg0ODAyLCJqdGkiOiI3MWJlNWRmMmMxMTI0YjE3YjNmMGExNGM3ZGY0MmMzZSIsInVzZXJfaWQiOjR9.bD-PQyDzTnmEMJKPQXd6tIvaY4hzw3BAXHQAolxUzuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memo\": \"録画予約\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/todo/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"create",
+						""
+					]
+				},
+				"description": "追加する"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/todo/update/3/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk0ODgzNDg0LCJqdGkiOiJmYTI0NmZmYjRjZDM0ZGM1OTFmMzE2OGQ0OTBjYzFlZSIsInVzZXJfaWQiOjF9.1WhjDjTaeG-8fL6XaWUHQkH_SMaYD_4YHNIwE9HSw4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memo\": \"電話をする\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/todo/update/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"update",
+						"3",
+						""
+					]
+				},
+				"description": "編集する"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/todo/delete/2/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk0ODgzNDg0LCJqdGkiOiJmYTI0NmZmYjRjZDM0ZGM1OTFmMzE2OGQ0OTBjYzFlZSIsInVzZXJfaWQiOjF9.1WhjDjTaeG-8fL6XaWUHQkH_SMaYD_4YHNIwE9HSw4Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/todo/delete/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"delete",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/todo/list/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/todo/list/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
