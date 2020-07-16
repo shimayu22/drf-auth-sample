@@ -21,7 +21,7 @@ class TodoUpdate(generics.UpdateAPIView):
     permission_classes = (DjangoModelPermissions,)
 
 class TodoDelete(generics.DestroyAPIView):
-    """管理者のみ、削除可能"""
+    """delete権限を持っているユーザーのみ、削除可能"""
     queryset = Todos.objects.all()
     serializer_class = TodosSerializer
     permission_classes = (DjangoModelPermissions,)
